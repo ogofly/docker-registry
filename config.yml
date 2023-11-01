@@ -19,7 +19,8 @@ storage:
   #   accesskeysecret: 
   #   region: oss-cn-hangzhou
   #   bucket: docker-registry-blob
-  # #   internal:
+  #   # Try to use internal traffic to reduce costs
+  # #   internal: true
   # #   encrypt:
   # #   secure:
   # #   chunksize:
