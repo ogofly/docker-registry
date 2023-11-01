@@ -7,10 +7,42 @@ log:
   fields:
     service: registry
 storage:
+  # 启用 cache 后，在 garbage collect 后重复 push 相同的 image 会失败
   # cache:
   #   blobdescriptor: inmemory
+
   filesystem:
     rootdirectory: /var/lib/registry
+  # aliyun oss
+  # oss:
+  #   accesskeyid: 
+  #   accesskeysecret: 
+  #   region: oss-cn-hangzhou
+  #   bucket: docker-registry-blob
+  # #   internal:
+  # #   encrypt:
+  # #   secure:
+  # #   chunksize:
+      
+  # s3:
+  #   accesskey: 
+  #   secretkey: 
+  #   region: oss-cn-hangzhou
+  #   regionendpoint: https://oss-cn-hangzhou.aliyuncs.com
+  #   # forcepathstyle: true
+  #   # accelerate: false
+  #   bucket: docker-registry-blob
+  #   # encrypt: true
+  #   # keyid: mykeyid
+  #   # secure: true
+  #   # v4auth: true
+  #   # chunksize: 5242880
+  #   # multipartcopychunksize: 33554432
+  #   # multipartcopymaxconcurrency: 100
+  #   # multipartcopythresholdsize: 33554432
+  #   rootdirectory: /reg
+  #   # usedualstack: false
+  #   loglevel: debug
   delete:
     enabled: true
 http:
